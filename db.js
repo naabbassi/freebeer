@@ -1,11 +1,12 @@
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-  host: 'localhost',
-  port: 3306,
-  user: 'root',
-  password: 'rootroot',
-  database: 'freebeer'
-});
+const { connection } = require('pg')
+
+const connection = new Pool({
+  user: 'bsjdzyojyqprcu',
+  host: 'ec2-50-17-227-28.compute-1.amazonaws.com',
+  database: 'd747lj4kthdgli',
+  password: 'dc275f969191c9aa285e33363dfe0d6e6d30bbefa4d91eb0f5cce55af9df243d',
+  port: 5432,
+})
 
 connection.connect(function (err) {
   if (err) {
