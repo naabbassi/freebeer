@@ -2,7 +2,7 @@ var express = require('express');
 var bp = require('body-parser');
 var path = require('path');
 var db = require('./db');
-var Port = Process.env.Port || 8888;
+var Port = process.env.Port || 8888;
 
 var app = express();
 // Body-parser middleware
@@ -37,7 +37,7 @@ app.get('/chance/newtry', function (req, res) {
   var data = {
     day : getDay(),
     value : 1,
-    timelapse : new Date()
+    date : new Date()
   }
   db.insert(data,function(r){
     res.send(r);
