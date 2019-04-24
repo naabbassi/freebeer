@@ -2,7 +2,7 @@ var express = require('express');
 var bp = require('body-parser');
 var path = require('path');
 var db = require('./db');
- 
+var Port = Process.env.Port || 8888;
 
 var app = express();
 // Body-parser middleware
@@ -48,6 +48,6 @@ app.get('/chance/getdaysum',function (req,res) {
     res.send(r);
   });
 });
-app.listen(8888, function () {
+app.listen(Port, function () {
   console.log('server is running on port 8888!');
 })

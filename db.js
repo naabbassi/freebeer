@@ -20,7 +20,7 @@ function insert(data,callback) {
   connection.query('Insert into days set ? ', data, function (err, r, f) {
     if (!err) {
       callback(r);
-    } else {
+    } else {  
     console.log(err);
     }
   })
